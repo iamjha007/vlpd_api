@@ -8,13 +8,9 @@ from werkzeug.utils import secure_filename
 import uuid
 import easyocr
 
-
-
 UPLOAD_FOLDER = "./uploads"
 ALLOWED_EXTENSIONS = ["png", "jpg", "jpeg"]
 MAX_CONTENT_LENGTH = 16 * 1024 * 1024
- 
-
 app = Flask(__name__)
 run_with_ngrok(app)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -45,9 +41,7 @@ def upload_image():
           
             # print(np_str)
             return np_str
-              
-
-
+            
 if __name__ == "__main__":
     app.run()
  
